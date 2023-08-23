@@ -1,0 +1,53 @@
+# Arquivos gerados pelo Spring Boot
+HELP.md
+
+# Arquivos de compilação e saída
+/build/
+/out/
+
+# Arquivos de configuração do Gradle
+/.gradle/
+gradle-wrapper.jar
+
+# Arquivos específicos de IDE
+/.idea/
+*.iml
+
+# Dados do PostgreSQL (supondo que você está excluindo dados do PostgreSQL)
+postgres-data/
+
+# Arquivos de cache do STS
+.apt_generated
+.sts4-cache
+
+# Cache do IntelliJ IDEA
+.idea/
+*.iws
+*.ipr
+out/
+
+# Cache do Visual Studio Code
+.vscode/
+
+# Arquivos de configuração do Eclipse
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+# Arquivos de configuração do NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# Ignorar os logs do Spring Boot
+spring.log
+
+# Ignorar logs específicos do IntelliJ IDEA
+idea.log
