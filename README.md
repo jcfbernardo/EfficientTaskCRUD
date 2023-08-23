@@ -20,7 +20,7 @@ Para executar o projeto EfficientTaskCRUD em sua máquina local, siga estas etap
 
 2. Clone este repositório para o seu ambiente de desenvolvimento:
 
-`git clone https://github.com/jcfbernardo/EfficientTaskCRUD.git`
+    `git clone https://github.com/jcfbernardo/EfficientTaskCRUD.git`
 
 3. Abra o projeto em sua IDE preferida (por exemplo, IntelliJ IDEA ou Eclipse).
 
@@ -28,7 +28,7 @@ Para executar o projeto EfficientTaskCRUD em sua máquina local, siga estas etap
 
 5. Para executar o projeto, use o seguinte comando:
 
-`./gradlew bootRun`
+    `./gradlew bootRun`
 
 
 6. Certifique-se de que o PostgreSQL esteja em execução no Docker, usando o arquivo `docker-compose.yml` fornecido no projeto.
