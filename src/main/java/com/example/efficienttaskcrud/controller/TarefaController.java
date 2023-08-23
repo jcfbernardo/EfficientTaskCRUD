@@ -1,10 +1,12 @@
 package com.example.efficienttaskcrud.controller;
 
 
+import com.example.efficienttaskcrud.dto.TarefaDTO;
 import com.example.efficienttaskcrud.model.Tarefa;
 import com.example.efficienttaskcrud.service.TarefaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,10 +16,11 @@ import java.util.List;
 public class TarefaController {
 
     @Autowired
-    TarefaService tarefaService;
+    private TarefaService tarefaService;
+
 
     @GetMapping("all")
-    public List<Tarefa> getAllTarefas() {
+    public List<TarefaDTO> getAllTarefas() {
         return tarefaService.getAllTarefas();
     }
 
@@ -27,13 +30,24 @@ public class TarefaController {
     }
 
     @PostMapping
-    public Tarefa createTarefa(@RequestBody Tarefa tarefa) {
-        return tarefaService.createTarefa(tarefa);
+    public ResponseEntity<Object> createTarefa(@RequestBody TarefaDTO tarefaDTO) {
+        Tarefa tarefa = tarefaDTO.toEntity();
+        try {
+            tarefaService.createTarefa(tarefa);
+            return ResponseEntity.ok().build();
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().build();
+        }
     }
 
     @PutMapping
-    public Tarefa updateTarefa(@RequestBody Tarefa tarefa) {
-        return tarefaService.updateTarefa(tarefa);
+    public ResponseEntity<Object> updateTarefa(@RequestBody TarefaDTO tarefaDTO) {
+        try {
+            tarefaService.updateTarefa(tarefaDTO);
+            return ResponseEntity.ok().build();
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(e);
+        }
     }
 
     @DeleteMapping
