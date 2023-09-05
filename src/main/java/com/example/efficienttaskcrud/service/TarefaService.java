@@ -10,7 +10,7 @@ public interface TarefaService {
     List<TarefaDTO> getAllTarefas();
     Tarefa getTarefa(Long tarefaId);
     Tarefa createTarefa(Tarefa tarefa);
-    void updateTarefa(TarefaDTO tarefaDTO);
+    void updateTarefa(Long id, TarefaDTO tarefaDTO);
     void deleteTarefa(Long tarefaId);
 
 }

@@ -4,8 +4,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
@@ -13,7 +11,6 @@ import lombok.NonNull;
 @Entity
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
 public class Tarefa {
 
     @Id
@@ -25,4 +22,10 @@ public class Tarefa {
     private String description;
     @NonNull
     private String status;
+
+    public Tarefa(String title, String description, String status) {
+        this.setTitle(title);
+        this.setDescription(description);
+        this.setStatus(status);
+    }
 }

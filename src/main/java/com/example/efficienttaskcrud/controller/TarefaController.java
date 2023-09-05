@@ -41,9 +41,10 @@ public class TarefaController {
     }
 
     @PutMapping
-    public ResponseEntity<Object> updateTarefa(@RequestBody TarefaDTO tarefaDTO) {
+    public ResponseEntity<Object> updateTarefa(@Param("tarefaId") String tarefaId, @RequestBody TarefaDTO tarefaDTO) {
+
         try {
-            tarefaService.updateTarefa(tarefaDTO);
+            tarefaService.updateTarefa(Long.parseLong(tarefaId), tarefaDTO);
             return ResponseEntity.ok().build();
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(e);

@@ -10,7 +10,6 @@ import lombok.Setter;
 @Getter
 @Setter
 public class TarefaDTO {
-        @NonNull
         private Long id;
         @NonNull
         private String title;
@@ -21,10 +20,8 @@ public class TarefaDTO {
 
         public Tarefa toEntity() {
                 return new Tarefa(
-                        this.getId(),
                         this.getTitle(),
                         this.getDescription(),
                         this.getStatus());
         }
-
 }

@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "3c01252a-0e7d-449d-8d5f-4895c081ccf2",
+		"name": "Efficient Task CRUD",
+		"description": "O **EfficientTaskCRUD** é um projeto pessoal focado no desenvolvimento de um sistema de lista de tarefas básico. O objetivo é criar um ambiente onde os usuários possam praticar e entender os conceitos fundamentais do desenvolvimento back-end, como criação de endpoints REST, gerenciamento de banco de dados, regras de negócio e testes unitários. Este projeto é uma ótima oportunidade para aprimorar as habilidades de programação e aprender a construir uma aplicação funcional desde a configuração inicial até a implementação de funcionalidades.\n\nO projeto visa construir um sistema no qual os usuários possam criar, atualizar, visualizar e excluir tarefas. O foco principal está na eficiência e na simplicidade, proporcionando uma experiência de usuário fluida ao lidar com suas tarefas diárias. A implementação de um CRUD (Create, Read, Update, Delete) para tarefas oferecerá aos desenvolvedores a oportunidade de explorar as diferentes camadas de um aplicativo back-end, desde a configuração da infraestrutura até a exposição de endpoints REST.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "26041683"
+	},
+	"item": [
+		{
+			"name": "Criar Nova Tarefa",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"BANCO DE DADOS\",\r\n    \"description\": \"Entender como funciona os relacionamentos\",\r\n    \"status\": \"A iniciar\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/v1/tarefas/"
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Tarefa pelo ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/tarefas/?tarefaId=6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"tarefas",
+						""
+					],
+					"query": [
+						{
+							"key": "tarefaId",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar todas as tarefas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/v1/tarefas/all"
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar Tarefa",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"title\": \"POSTMAN\",\r\n    \"description\": \"Praticar testes de endpoints\",\r\n    \"status\": \"Em andamento\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/tarefas/?tarefaId=6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"tarefas",
+						""
+					],
+					"query": [
+						{
+							"key": "tarefaId",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar Tarefa",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/tarefas/?tarefaId=7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"tarefas",
+						""
+					],
+					"query": [
+						{
+							"key": "tarefaId",
+							"value": "7"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

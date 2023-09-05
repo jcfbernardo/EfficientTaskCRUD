@@ -35,10 +35,9 @@ Para executar o projeto EfficientTaskCRUD em sua máquina local, siga estas etap
 
 7. Agora você pode acessar os endpoints da API e testá-los utilizando o Postman ou qualquer outro cliente de API.
 
-## Documentação dos Endpoints 
-### 🚧 Em Construção 🚧
+## Documentação dos Endpoints
 
-A documentação detalhada dos endpoints da API pode ser encontrada no arquivo `EfficientTaskCRUD.postman_collection.json`, que está incluído neste repositório. Importe este arquivo para o Postman para visualizar e testar os endpoints diretamente.
+A documentação detalhada dos endpoints da API pode ser encontrada no arquivo `Efficient Task CRUD.postman_collection.json`, que está incluído neste repositório. Importe este arquivo para o Postman para visualizar e testar os endpoints diretamente.
 
 ✨ Divirta-se explorando e desenvolvendo o EfficientTaskCRUD! Se você tiver alguma dúvida ou precisar de ajuda, sinta-se à vontade para entrar em contato.
 
